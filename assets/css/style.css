@@ -63,7 +63,6 @@ section:first-of-type {
 
 section:first-of-type main {
     display: flex;
-
 }
 
 section:first-of-type main article {
@@ -71,6 +70,12 @@ section:first-of-type main article {
     margin: 0.5em;
     border: 2px solid black;
     border-radius: 10px;
+}
+
+section:first-of-type main article img {
+    width: 100%;
+    height: 150px;
+    background-size: 150px;
 }
 
 /* Catégories Setup */
