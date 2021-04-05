@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+/* Grid Setup */
+body {
+    min-height: 100vh;
+    min-width: 100vh;
+    display: grid;
+
+    grid-template-columns: 1fr 85%;
+    grid-template-rows: 4% 1fr 1fr 10%;
+
+    grid-template-areas: 
+        "nav search"
+        "nav header"
+        "nav plats"
+        "nav categorie";
+}
+
+aside {
+    grid-area: search;
+    background-color: pink;
+}
+
+/* Nav Setup */
+nav {
+    grid-area: nav;
+    background-color: blue;
+}
+
+/* Header Setup */
+header {
+    grid-area: header;
+    /* background-color: red; */
+    background-image: url("./../img/hero-section.jpeg");
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 0 1%;
+}
+
+header h1 {
+    font-weight: 1000;
+    font-size: xx-large;
+}
+
+/* Plats Setup */
+section:first-of-type {
+    grid-area: plats;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+}
+
+section:first-of-type main {
+    display: flex;
+
+}
+
+section:first-of-type main article {
+    width: 200px;
+    margin: 0.5em;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* Catégories Setup */
+section:nth-of-type(2) {
+    grid-area: categorie;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+section:nth-of-type(2) ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
