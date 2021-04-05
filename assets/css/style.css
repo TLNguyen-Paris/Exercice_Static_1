@@ -13,6 +13,11 @@ h2, h3 {
     margin-left: 0.5em;
 }
 
+hr {
+    border: 1px solid #FCD65B;
+    margin: 0 0.5em;
+}
+
 /* Grid Setup */
 body {
     min-height: 100vh;
@@ -27,19 +32,34 @@ body {
         "nav header"
         "nav plats"
         "nav categorie";
+    
+    background-color: #f3f4f6;
 }
 
 
 /* Search bar */
 div:first-of-type {
     grid-area: search;
-    background-color: pink;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 1em;
+}
+
+div:first-of-type input {
+    border-radius: 5px;
+}
+
+div:first-of-type img {
+    width: 20px;
+    height: 20px;
 }
 
 /* Nav Setup */
 nav {
     grid-area: nav;
-    background-color: blue;
+    background-color: #fff;
 }
 
 /* Header Setup */
@@ -47,6 +67,7 @@ header {
     grid-area: header;
     /* background-color: red; */
     background-image: url("./../img/hero-section.jpeg");
+    background-size: cover;
     color: black;
     display: flex;
     align-items: center;
@@ -63,9 +84,10 @@ header h1 {
 /* Plats Setup */
 section:first-of-type {
     grid-area: plats;
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 section:first-of-type main {
@@ -82,12 +104,13 @@ section:first-of-type main article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #fff;
 }
 
 section:first-of-type main article img {
     width: 100%;
     height: 150px;
-    background-size: 150px;
+    object-fit: cover;
 }
 
 section:first-of-type main article aside {
@@ -104,7 +127,7 @@ section:first-of-type main article aside img {
 /* Catégories Setup */
 section:nth-of-type(2) {
     grid-area: categorie;
-    background-color: green;
+    /* background-color: green; */
     display: flex;
     flex-direction: column;
 }
@@ -122,7 +145,14 @@ section:nth-of-type(2) ul img {
     height: 30px;
 }
 
-section:nth-child(2)>ul>li {
+section:nth-child(2)>ul li {
     display: flex;
     flex-direction: column;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
