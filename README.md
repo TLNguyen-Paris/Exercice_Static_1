@@ -4,7 +4,7 @@ Cloning a template using HTML/CSS with Grid and Flexbox
 
 ## Template
 
-The template is the Capture.png in the git repertory.
+The template is the Capture.png in the git repository.
 
 ## How to check it out ?
 
